@@ -44,7 +44,7 @@ const CreateArea = ({ onAdd }) => {
         <textarea
           name="content"
           rows={isExpanded ? 3 : 1}
-          onClick={() => setIsExpanded(!isExpanded)}
+          onClick={() => setIsExpanded(true)}
           placeholder="Take a note..."
           value={note.content}
           onChange={handleChange}
