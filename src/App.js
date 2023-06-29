@@ -6,6 +6,7 @@ import Note from "./components/Note";
 
 import "./App.css";
 import Footer from "./components/Footer";
+import Count from "./components/Count";
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -27,6 +28,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Count count={notes.length === 0 ? "Empty" : `Showing ${notes.length}`} />
       <CreateArea onAdd={addNote} />
       <div className="note-list">
         {notes?.map((note, index) => {
